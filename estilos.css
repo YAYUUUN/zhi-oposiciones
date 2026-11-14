@@ -156,8 +156,8 @@ p { margin: 0 0 14px; }
 
 .cierre { padding: 96px 0; border-top: 1px solid var(--borde); }
 .cierre h2 { max-width: 22ch; }
-.cierre p { max-width: 36em; }
-.cierre p { color: var(--suave); font-size: 19px; margin-top: 18px; }
+.cierre p:not(.antetitulo) { max-width: 36em; }
+.cierre p:not(.antetitulo) { color: var(--suave); font-size: 19px; margin-top: 18px; }
 
 /* ---------- Pie ---------- */
 .pie { border-top: 1px solid var(--borde); padding: 32px 0 40px; font-size: 14px; color: var(--suave); }
