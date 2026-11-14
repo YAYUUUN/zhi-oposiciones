@@ -68,7 +68,7 @@ a { color: var(--enlace); text-underline-offset: 3px; text-decoration-thickness:
 .logo { font: 600 28px/1 var(--serif); letter-spacing: -0.01em; }
 .producto { font-size: 12px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--suave);
   padding-left: 12px; border-left: 1px solid var(--borde-fuerte); white-space: nowrap; }
-nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
 nav a { color: var(--texto); text-decoration: none; }
 nav a:hover { color: var(--enlace); text-decoration: underline; }
 
@@ -234,6 +234,7 @@ nav a.nav-piloto:hover { border-color: var(--texto); text-decoration: none; }
 
 /* ---------- Pantallas medianas y móvil ---------- */
 @media (max-width: 900px) {
+  nav li:not(:last-child) { display: none; }
   .portada .ancho, .seccion-cabecera, .dos { grid-template-columns: 1fr; gap: 40px; }
   .seccion-cabecera { gap: 16px; }
   .pasos, .datos { grid-template-columns: 1fr; gap: 28px; }
@@ -243,7 +244,6 @@ nav a.nav-piloto:hover { border-color: var(--texto); text-decoration: none; }
   body { font-size: 16px; }
   .ancho { padding: 0 16px; }
   .cabecera .ancho { min-height: 60px; }
-  nav li:not(:last-child) { display: none; }
   .logo { font-size: 24px; }
   .producto { font-size: 11px; padding-left: 10px; }
   h1 { font-size: 38px; }
@@ -256,4 +256,4 @@ nav a.nav-piloto:hover { border-color: var(--texto); text-decoration: none; }
   .muestra { padding: 18px 16px 14px; }
   .cierre { padding: 64px 0; }
 }
-.cierre .correo-visible { font-size: 14px; margin-top: 14px; }
+.cierre p.correo-visible { font-size: 14px; margin-top: 14px; }
