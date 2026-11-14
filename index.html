@@ -10,7 +10,7 @@
   <meta property="og:locale" content="es_ES">
   <meta name="theme-color" content="#1c2f52">
   <link rel="icon" href="icono.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="estilos.css?v=1">
+  <link rel="stylesheet" href="estilos.css?v=2">
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -26,7 +26,7 @@
           <li><a href="#como">Cómo funciona</a></li>
           <li><a href="#corrige">Qué corrige</a></li>
           <li><a href="#editoriales">Editoriales</a></li>
-          <li><a href="#piloto">Piloto</a></li>
+          <li><a href="#piloto" class="nav-piloto">Piloto</a></li>
         </ul>
       </nav>
     </div>
@@ -43,30 +43,34 @@
             <a class="boton primario" href="mailto:jiajunw963@gmail.com?subject=Piloto%20de%20Zhi">Pedir acceso al piloto</a>
             <a class="boton" href="#como">Cómo funciona</a>
           </div>
+          <p class="correo-visible">O escribe a <a href="mailto:jiajunw963@gmail.com">jiajunw963@gmail.com</a></p>
         </div>
 
-        <figure class="muestra" aria-label="Ejemplo de corrección">
-          <div class="muestra-cabecera">
-            <span class="muestra-tema">Título Preliminar · arts. 1 a 9 CE</span>
-            <span class="muestra-nota">8<small> / 10</small></span>
+        <figure class="telefono" aria-label="Pantalla de resultado de Zhi en un móvil">
+          <div class="pantalla">
+            <div class="app-barra"><span>‹ Temas</span></div>
+            <p class="app-materia">Ejemplo · La Corona (arts. 56 a 65 CE)</p>
+            <p class="app-titulo">Resultado</p>
+            <div class="app-nota">
+              <span class="cifra">8,6<small> / 10</small></span>
+              <span class="cifras">
+                <span><i class="dicho"></i>Bien <b>47</b></span>
+                <span><i class="error"></i>Error <b>4</b></span>
+                <span><i class="saltado"></i>Saltado <b>4</b></span>
+              </span>
+            </div>
+            <p class="app-apartado"><i class="error"></i>Error <b>4</b></p>
+            <div class="app-fallo">
+              <span class="ref">Art. 57.5</span>
+              Has dicho <mark>ley ordinaria</mark>. El artículo dice <mark class="bien">ley orgánica</mark>.
+              <span class="cita">«… se resolverán por una ley orgánica»</span>
+            </div>
+            <div class="app-fallo">
+              <span class="ref">Art. 64.1</span>
+              Has dicho <mark>Presidente del Senado</mark>. El artículo dice <mark class="bien">Presidente del Congreso</mark>.
+            </div>
           </div>
-          <ul>
-            <li class="error">
-              <span class="ref">Art. 8.2</span>
-              Has dicho solo <mark>«ley»</mark>. El artículo dice <mark class="bien">ley orgánica</mark>.
-              <span class="cita">«Una ley orgánica regulará las bases de la organización militar…»</span>
-            </li>
-            <li class="error">
-              <span class="ref">Art. 3.1</span>
-              Lo has dicho al revés: <mark>derecho … deber</mark>. El artículo dice <mark class="bien">deber … derecho</mark>.
-              <span class="cita">«Todos los españoles tienen el deber de conocerla y el derecho a usarla»</span>
-            </li>
-            <li class="equivalente">
-              <span class="ref">Art. 9.1 · Con otras palabras</span>
-              Has dicho «sometidos» donde el texto dice «sujetos». Significa lo mismo: cuenta como bien.
-            </li>
-          </ul>
-          <figcaption>Fragmento de la corrección de una recitación de ejemplo.</figcaption>
+          <figcaption>Corrección real de una recitación de ejemplo.</figcaption>
         </figure>
       </div>
     </section>
@@ -88,13 +92,13 @@
           </li>
           <li>
             <h3>Repasas lo que has fallado</h3>
-            <p>Cada fallo con su artículo y el texto correcto al lado. El historial te dice qué artículos repasar.</p>
+            <p>Cada fallo con su artículo y el texto correcto al lado. Y si quieres, un simulacro: temas al azar y cronómetro, como el día del examen.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="seccion" id="corrige" aria-labelledby="corrige-titulo">
+    <section class="seccion banda" id="corrige" aria-labelledby="corrige-titulo">
       <div class="ancho">
         <div class="seccion-cabecera">
           <h2 id="corrige-titulo">Qué corrige</h2>
@@ -119,19 +123,6 @@
           </div>
         </dl>
         <p class="aviso">La corrección es automática y puede equivocarse. Sirve para practicar y no sustituye al preparador.</p>
-      </div>
-    </section>
-
-    <section class="seccion" aria-labelledby="simulacro-titulo">
-      <div class="ancho dos">
-        <h2 id="simulacro-titulo">También en simulacro</h2>
-        <div class="texto">
-          <p><strong>Temas al azar y cronómetro, como el día del examen.</strong> Al terminar, la nota de cada tema y la corrección de todos, uno por uno.</p>
-          <ul class="lista-simple">
-            <li><strong>Tiempo:</strong> cuánto has tardado en cada tema y en el total.</li>
-            <li><strong>Historial:</strong> tus intentos por tema, para ver si mejoras.</li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -174,6 +165,31 @@
           <div class="acciones">
             <a class="boton" href="mailto:jiajunw963@gmail.com?subject=Zhi%20para%20editoriales">Escribidnos</a>
           </div>
+          <p class="correo-visible">jiajunw963@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="ancho dos">
+        <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
+        <div class="preguntas">
+          <details>
+            <summary>¿Cuánto cuesta?</summary>
+            <p>Durante el piloto, nada.</p>
+          </details>
+          <details>
+            <summary>¿Qué temas hay?</summary>
+            <p>Por ahora, seis temas de Derecho Constitucional sacados del BOE, para judicatura. El objetivo es tener temarios completos de la mano de editoriales.</p>
+          </details>
+          <details>
+            <summary>¿Hay que instalar algo?</summary>
+            <p>No. Se abre en el navegador del móvil o del ordenador, y en el móvil se puede añadir a la pantalla de inicio como una app.</p>
+          </details>
+          <details>
+            <summary>¿Sustituye al preparador?</summary>
+            <p>No. Es para practicar entre sesiones: te dice dónde fallas para que llegues a la sesión con el tema más limpio.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -186,6 +202,7 @@
         <div class="acciones">
           <a class="boton primario" href="mailto:jiajunw963@gmail.com?subject=Piloto%20de%20Zhi">Pedir acceso al piloto</a>
         </div>
+        <p class="correo-visible">O escribe a <a href="mailto:jiajunw963@gmail.com">jiajunw963@gmail.com</a></p>
       </div>
     </section>
   </main>

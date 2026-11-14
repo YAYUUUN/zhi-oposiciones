@@ -172,6 +172,66 @@ p { margin: 0 0 14px; }
 .documento p, .documento li { color: var(--suave); }
 .documento .fecha { font-size: 14px; color: var(--suave); margin-bottom: 32px; }
 
+
+/* ---------- Móvil de muestra (pantalla de resultado de la app, en HTML) ---------- */
+.telefono { margin: 0; justify-self: center; width: 100%; max-width: 330px; }
+.pantalla {
+  border: 10px solid #15213a;
+  border-radius: 38px;
+  background: #f5f3ee;
+  color: #1b1d21;
+  padding: 18px 16px 22px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 24px 48px -24px rgba(28,47,82,.35);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.app-barra { display: flex; justify-content: space-between; font-weight: 600; color: #24467d; font-size: 14px; padding: 2px 2px 10px; }
+.app-materia { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: .03em; color: #5a5f68; }
+.app-titulo { margin: 2px 0 10px; font: 600 21px/1.2 var(--serif); }
+.app-nota { display: block; background: #fff; border: 1px solid #e0dcd2; border-radius: 8px; padding: 12px 14px; }
+.app-nota .cifra { display: block; font: 600 38px/1 var(--serif); }
+.app-nota .cifra small { font: 500 13px var(--sans); color: #5a5f68; }
+.app-nota .cifras { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 8px; font-size: 12.5px; font-weight: 500; }
+.pantalla i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+.pantalla i.dicho { background: #1d6b45; } .pantalla i.error { background: #a3352b; } .pantalla i.saltado { background: #c7c2b6; }
+.app-apartado { margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid #e0dcd2; font: 600 15px var(--serif); }
+.app-apartado b { font: 600 12px var(--sans); color: #5a5f68; margin-left: 4px; }
+.app-fallo { background: #fff; border: 1px solid #e0dcd2; border-left: 3px solid #a3352b; border-radius: 4px; padding: 9px 11px; margin-top: 7px; font-size: 13.5px; }
+.app-fallo .ref { display: block; font-size: 11px; font-weight: 600; color: #5a5f68; margin-bottom: 1px; }
+.app-fallo mark { background: none; color: #a3352b; font-weight: 600; }
+.app-fallo mark.bien { color: #1d6b45; }
+.app-fallo .cita { display: block; margin-top: 5px; font: italic 13px/1.45 var(--serif); color: #5a5f68; }
+.telefono figcaption { text-align: center; font-size: 13px; color: var(--suave); margin-top: 14px; }
+
+/* ---------- Banda en azul tinta (ritmo visual) ---------- */
+.banda { background: #1c2f52; color: #eef1f6; border-top: 0; }
+.banda h2, .banda dt { color: #ffffff; }
+.banda .seccion-cabecera p, .banda dd { color: #c3cbda; }
+.banda .corrige div { border-top-color: rgba(255,255,255,.16); }
+.banda .corrige .error dt::before { background: #ef8a80; }
+.banda .corrige .saltado dt::before { background: #aab1bd; }
+.banda .corrige .incompleto dt::before { background: #e3a656; }
+.banda .corrige .equivalente dt::before { background: #5cc4cc; }
+.banda .aviso { background: rgba(255,255,255,.06); border-left-color: rgba(255,255,255,.35); color: #c3cbda; }
+@media (prefers-color-scheme: dark) { .banda { background: #18233a; } }
+
+/* ---------- Correo visible (por si no hay programa de correo) ---------- */
+.correo-visible { margin: 14px 0 0; font-size: 14px; color: var(--suave); }
+.correo-visible a { color: var(--suave); }
+
+/* ---------- Preguntas frecuentes ---------- */
+.preguntas details { border-top: 1px solid var(--borde); }
+.preguntas details:last-child { border-bottom: 1px solid var(--borde); }
+.preguntas summary { display: flex; align-items: center; min-height: 56px; cursor: pointer; list-style: none; font: 600 18px/1.35 var(--serif); }
+.preguntas summary::-webkit-details-marker { display: none; }
+.preguntas summary::after { content: "+"; margin-left: auto; padding-left: 16px; font: 400 22px var(--sans); color: var(--suave); }
+.preguntas details[open] summary::after { content: "–"; }
+.preguntas p { color: var(--suave); margin: 0 0 18px; max-width: 40em; }
+
+/* Piloto en la navegación: el destino principal, como enlace marcado */
+nav a.nav-piloto { padding: 7px 14px; border: 1px solid var(--borde-fuerte); border-radius: 6px; }
+nav a.nav-piloto:hover { border-color: var(--texto); text-decoration: none; }
+
 /* ---------- Pantallas medianas y móvil ---------- */
 @media (max-width: 900px) {
   .portada .ancho, .seccion-cabecera, .dos { grid-template-columns: 1fr; gap: 40px; }
@@ -192,6 +252,8 @@ p { margin: 0 0 14px; }
   .portada { padding: 48px 0 64px; }
   .seccion { padding: 64px 0; }
   .acciones .boton { flex: 1 1 100%; }
+  .telefono { max-width: 300px; }
   .muestra { padding: 18px 16px 14px; }
   .cierre { padding: 64px 0; }
 }
+.cierre .correo-visible { font-size: 14px; margin-top: 14px; }
